@@ -54,11 +54,11 @@ d3.csv("data.csv", function(error, data) {
       .attr("d", arc)
       .style("fill", function(d) { return color(d.data.stressed); });
 
-  g.append("text")
-      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-      .attr("dy", ".35em")
-      .style("text-anchor", "middle")
-      .text(function(d) { return d.data.population + "%"; });
+  //g.append("text")
+  //    .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+  //    .attr("dy", ".35em")
+  //    .style("text-anchor", "middle")
+  //    .text(function(d) { return d.data.population + "%"; });
 
 });
 
