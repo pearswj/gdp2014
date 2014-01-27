@@ -15,7 +15,7 @@ body {
 
 </style>
 <body>
-<span onmouseover='d3.select("body").select("svg").selectAll(".arc")[0][1].select("path").style("fill", "white");' onmouseout='d3.select("body").select("svg").selectAll(".arc")[0][1].select("path").style("fill", "#3D5763");'>81.9%</span> of Londoners are stressed some or all of the time.
+<span onmouseover='d3.select("body").select("svg").select(".arc").select("path").style("fill", "white");' onmouseout='d3.select("body").select("svg").select(".arc").select("path").style("fill", "#3D5763");'>81.9%</span> of Londoners are stressed some or all of the time.
 
 38.6% of Londoners worry about their commute to work.
 
@@ -27,7 +27,7 @@ var width = 200,
     radius = Math.min(width, height) / 2;
 
 var color = d3.scale.ordinal()
-    .range(["#347783", "#3D5763"]);
+    .range(["#3D5763", "#347783"]);
 
 var arc = d3.svg.arc()
     .outerRadius(radius - 10)
