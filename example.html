@@ -62,7 +62,7 @@ d3.csv("data.csv", function(error, data) {
 
 });
 
-arc = d3.svg.arc()
+var arc2 = d3.svg.arc()
     .outerRadius(radius - 50)
     .innerRadius(radius - 80);
 
@@ -72,14 +72,14 @@ d3.csv("data2.csv", function(error, data) {
     d.population = +d.population;
   });
 
-  var g = svg.selectAll(".arc")
+  var g = svg.selectAll(".arc2")
       .data(pie(data))
     .enter().append("g")
-      .attr("class", "arc");
+      .attr("class", "arc2");
 
   g.append("path")
-      .attr("d", arc)
-      .style("fill", function(d) { return color(d.data.stressed); });
+      .attr("d", arc2)
+      .style("fill", function(d) { return color(d.data.worry); });
 
   //g.append("text")
   //    .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
