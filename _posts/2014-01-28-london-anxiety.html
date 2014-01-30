@@ -43,7 +43,7 @@ title: London Anxiety
     .append("g")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
   
-  d3.csv("gdp2014/data/stress.csv", function(error, data) {
+  d3.csv("/gdp2014/data/stress.csv", function(error, data) {
   
     data.forEach(function(d) {
       d.population = +d.population;
@@ -70,7 +70,7 @@ title: London Anxiety
       .outerRadius(radius - 50)
       .innerRadius(radius - 80);
   
-  d3.csv("gdp2014/data/worry.csv", function(error, data) {
+  d3.csv("/gdp2014/data/worry.csv", function(error, data) {
   
     data.forEach(function(d) {
       d.population = +d.population;
@@ -91,7 +91,7 @@ title: London Anxiety
       .outerRadius(radius - 90)
       .innerRadius(radius - 120);
   
-  d3.csv("gdp2014/data/anxiety.csv", function(error, data) {
+  d3.csv("/gdp2014/data/anxiety.csv", function(error, data) {
   
     data.forEach(function(d) {
       d.population = +d.population;
