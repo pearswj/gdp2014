@@ -5,11 +5,10 @@ layout: main
 <div id="about">
 {% for post in site.posts %}
 
-  
-    <h2>{{ page.title }}</h2>
-    {{ page.date | date: "<p class='date'></br>%A, %e %B %Y</p>" }}
-    {{ post.content }}
-  
+  <h2>{{ post.title }}</h2>
+  {{ post.date | date: "<p class='date'></br>%A, %e %B %Y</p>" }}
+  {{ post.content }}
+  <hr>
   
 {% endfor %}
 </div>
