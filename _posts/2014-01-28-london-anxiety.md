@@ -3,21 +3,11 @@ layout: main
 title: London Anxiety
 ---
 
-<p>Hover over the numbers below...</p>
-<br/>
-<p>
-<a href="#" onmouseover='d3.select("body").select("svg").select(".arc").select("path").style("fill", "#65CDCC");' onmouseout='d3.select("body").select("svg").select(".arc").select("path").style("fill", "#3D5763");'>81.9%</a> of Londoners are <em>stressed some or all of the time</em>.
-</p>
+Hover over the numbers below...
 
-<p>
-<a href="#" onmouseover='d3.select("body").select("svg").select(".arc2").select("path").style("fill", "#65CDCC");' onmouseout='d3.select("body").select("svg").select(".arc2").select("path").style("fill", "#3D5763");'>38.6%</a> of Londoners worry about their <em>commute to work</em>.
-</p>
-
-<p>
-<a href="#" onmouseover='d3.select("body").select("svg").select(".arc3").select("path").style("fill", "#65CDCC");' onmouseout='d3.select("body").select("svg").select(".arc3").select("path").style("fill", "#3D5763");'>1 in 5</a> Londoners report <em>high anxiety levels</em>.
-</p>
-
-<br/>
+* <a href="#" onmouseover='d3.select("body").select("svg").select(".arc").select("path").style("fill", "#65CDCC");' onmouseout='d3.select("body").select("svg").select(".arc").select("path").style("fill", "#3D5763");'>81.9%</a> of Londoners are _stressed some or all of the time_.
+* <a href="#" onmouseover='d3.select("body").select("svg").select(".arc2").select("path").style("fill", "#65CDCC");' onmouseout='d3.select("body").select("svg").select(".arc2").select("path").style("fill", "#3D5763");'>38.6%</a> of Londoners worry about their _commute to work_.
+* <a href="#" onmouseover='d3.select("body").select("svg").select(".arc3").select("path").style("fill", "#65CDCC");' onmouseout='d3.select("body").select("svg").select(".arc3").select("path").style("fill", "#3D5763");'>1 in 5</a> Londoners report _high anxiety levels_.
 
 <div id="pie"></div>
 
