@@ -2,13 +2,7 @@
 layout: main
 ---
 
-<br class="clear" />
-<div id="Posts">
-  <table>
-    <tbody>
 {% for post in site.posts %}
-      <tr><td class="datetd">{{ post.date | date: "%e %B %Y" }} </td><td><a href="/gdp2014{{ post.url | remove:'.html' | escape }}">{{ post.title }}</a></td></tr>
+{{ post.date | date: "%e %B %Y" }} <a href="/gdp2014{{ post.url | remove:'.html' | escape }}">{{ post.title }}</a>
+{{ post.excerpt }}
 {% endfor %}
-    </tbody>
-  </table>
-</div>
