@@ -4,5 +4,5 @@ layout: main
 
 {% for post in site.posts %}
 {{ post.date | date: "%e %B %Y" }} <a href="/gdp2014{{ post.url | remove:'.html' | escape }}">{{ post.title }}</a>
-{{ post.excerpt }}
+{{ post.content }}
 {% endfor %}
