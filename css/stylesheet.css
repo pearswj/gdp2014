@@ -1,0 +1,48 @@
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 15px sans-serif;
+  fill: #fff;
+}
+
+#container {
+  width: 600px;
+  padding: 50px;
+}
+
+#disqus_thread {
+  margin-top: 100px;
+}
+
+/*.arc path {
+  stroke: #fff;
+  stroke-width: 0;
+}*/
+
+/* link colors, from daring fireball... */
+a,
+a:link {
+  text-decoration: none;
+  color: #008080;
+  border-color: #999;
+  border-width: 0 0 1px 0;
+  border-style: none none solid none;
+  padding: 3px 0px 2px 0px;
+  background-color: inherit;
+}
+
+a:visited,
+a:link:visited {
+  color: #999988;
+  border-color: #999;
+  border-width: 0 0 1px 0;
+  border-style: none none dashed none;
+  padding: 3px 0px 2px 0px;
+  background-color: inherit;
+}
+a:active,
+a:hover {
+  color: #008080;
+  text-decoration: none;
+  background-color: #efefef;
+  border-style: none;
+}
