@@ -46,3 +46,7 @@ a:hover {
   background-color: #efefef;
   border-style: none;
 }
+
+img {
+  max-width: 100%;
+}
