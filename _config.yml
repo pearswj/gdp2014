@@ -4,4 +4,4 @@ redcarpet:
 pygments: true
 title: Ramboll UK Graduate Design Project 2014
 permalink: /blog/:title.html
-baseurl: "gdp2014"
+baseurl: "/gdp2014"
