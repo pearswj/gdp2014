@@ -2,13 +2,25 @@
 layout: main
 ---
 
-<div id="about">
-{% for post in site.posts %}
+{% for post in site.posts {{ site.baseurl }}%}
 
-  <h2>{{ post.title }}</h2>
-  {{ post.date | date: "<p class='date'></br>%A, %e %B %Y</p>" }}
-  {{ post.content }}
+  {% if post.short %}
+  <div class="snippet">
+    {{ post.content }}
+  </div>
+  {% else %}
+    <div class="story">
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    {{ post.date | date: "<p class='date'></br>%A, %e %B %Y</p>" }}
+    {{ post.content }}
+  </div>
+  {% endif %}
   <hr>
   
 {% endfor %}
-</div>
+
+<footer>
+Created and curated by Will Pearson, Jai Shah, Annabel Young and Emma Mathias-Jones.
+</br>
+Copyright © 2014 Ramboll Ltd.
+</footer>

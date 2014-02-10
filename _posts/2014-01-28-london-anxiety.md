@@ -5,11 +5,11 @@ title: London Anxiety
 
 Hover over the numbers below...
 
-* <a href="#" onmouseover='d3.select("body").select("svg").select(".arc").select("path").style("fill", "#65CDCC");' onmouseout='d3.select("body").select("svg").select(".arc").select("path").style("fill", "#3D5763");'>81.9%</a> of Londoners are _stressed some or all of the time_.
-* <a href="#" onmouseover='d3.select("body").select("svg").select(".arc2").select("path").style("fill", "#65CDCC");' onmouseout='d3.select("body").select("svg").select(".arc2").select("path").style("fill", "#3D5763");'>38.6%</a> of Londoners worry about their _commute to work_.
-* <a href="#" onmouseover='d3.select("body").select("svg").select(".arc3").select("path").style("fill", "#65CDCC");' onmouseout='d3.select("body").select("svg").select(".arc3").select("path").style("fill", "#3D5763");'>1 in 5</a> Londoners report _high anxiety levels_.
+* <a href="#" onmouseover='d3.select("body").select("#pie").select(".arc").select("path").style("fill", "#e1c9cf");' onmouseout='d3.select("body").select("#pie").select(".arc").select("path").style("fill", "#5A9593");'>81.9%</a> of Londoners are _stressed some or all of the time_.
+* <a href="#" onmouseover='d3.select("body").select("#pie").select(".arc2").select("path").style("fill", "#e1c9cf");' onmouseout='d3.select("body").select("#pie").select(".arc2").select("path").style("fill", "#5A9593");'>38.6%</a> of Londoners worry about their _commute to work_.
+* <a href="#" onmouseover='d3.select("body").select("#pie").select(".arc3").select("path").style("fill", "#e1c9cf");' onmouseout='d3.select("body").select("#pie").select(".arc3").select("path").style("fill", "#5A9593");'>1 in 5</a> Londoners report _high anxiety levels_.
 
-<div id="pie"></div>
+<div id="pie" class="pretty"></div>
 
 <script>
   var width = 300,
@@ -17,7 +17,7 @@ Hover over the numbers below...
       radius = Math.min(width, height) / 2;
   
   var color = d3.scale.ordinal()
-      .range(["#3D5763", "#347783"]);
+      .range(["#5A9593", "#98D0CF"]);
   
   var arc = d3.svg.arc()
       .outerRadius(radius - 10)
@@ -27,19 +27,19 @@ Hover over the numbers below...
       .sort(null)
       .value(function(d) { return d.population; });
   
-  var svg = d3.select("body").select("#pie").append("svg")
+  var svg_pie = d3.select("body").select("#pie").append("svg")
       .attr("width", width)
       .attr("height", height)
     .append("g")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
   
-  d3.csv("/gdp2014/data/stress.csv", function(error, data) {
+  d3.csv("{{ site.baseurl }}/data/stress.csv", function(error, data) {
   
     data.forEach(function(d) {
       d.population = +d.population;
     });
   
-    var g = svg.selectAll(".arc")
+    var g = svg_pie.selectAll(".arc")
         .data(pie(data))
       .enter().append("g")
         .attr("class", "arc");
@@ -60,13 +60,13 @@ Hover over the numbers below...
       .outerRadius(radius - 50)
       .innerRadius(radius - 80);
   
-  d3.csv("/gdp2014/data/worry.csv", function(error, data) {
+  d3.csv("{{ site.baseurl }}/data/worry.csv", function(error, data) {
   
     data.forEach(function(d) {
       d.population = +d.population;
     });
   
-    var g = svg.selectAll(".arc2")
+    var g = svg_pie.selectAll(".arc2")
         .data(pie(data))
       .enter().append("g")
         .attr("class", "arc2");
@@ -81,13 +81,13 @@ Hover over the numbers below...
       .outerRadius(radius - 90)
       .innerRadius(radius - 120);
   
-  d3.csv("/gdp2014/data/anxiety.csv", function(error, data) {
+  d3.csv("{{ site.baseurl }}/data/anxiety.csv", function(error, data) {
   
     data.forEach(function(d) {
       d.population = +d.population;
     });
   
-    var g = svg.selectAll(".arc3")
+    var g = svg_pie.selectAll(".arc3")
         .data(pie(data))
       .enter().append("g")
         .attr("class", "arc3");
