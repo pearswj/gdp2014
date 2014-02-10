@@ -2,7 +2,7 @@
 layout: main
 ---
 
-The top 20 happiest countries.
+Below are the top 20 happiest countries, apparently.
 
 <!-- 1. Denmark
 2. Norway
