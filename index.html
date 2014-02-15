@@ -2,7 +2,7 @@
 layout: main
 ---
 
-{% for post in site.posts {{ site.baseurl }}%}
+{% for post in site.posts %}
 
   {% if post.short %}
   <div class="snippet">
@@ -18,9 +18,3 @@ layout: main
   <hr>
   
 {% endfor %}
-
-<footer>
-Created and curated by Will Pearson, Jai Shah, Annabel Young and Emma Mathias-Jones.
-</br>
-Copyright © 2014 Ramboll Ltd.
-</footer>
