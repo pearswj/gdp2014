@@ -2,6 +2,8 @@
 layout: main
 ---
 
+Londoners also walk pretty fast.
+
 <a href="{{ site.baseurl }}/images/pace.jpg">
   <img class="pretty" src="{{ site.baseurl }}/images/pace.jpg" style="width: 90%;">
 </a>

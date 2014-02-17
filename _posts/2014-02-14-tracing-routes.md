@@ -2,7 +2,7 @@
 layout: main
 ---
 
-Using public data from [RunKeeper](http://runkeeper.com/search/routes/1?distance=&lon=-0.139&location=fitzrovia%2C+london&activityType=RUN&lat=51.522) to map movement by <span style="color: #5a9593">bike</span> and by <span style="color: #98d0cf">foot</span> through [Fitzrovia](http://en.wikipedia.org/wiki/Fitzrovia) and the surrounding areas.
+A little side-study using public data from [RunKeeper](http://runkeeper.com/search/routes/1?distance=&lon=-0.139&location=fitzrovia%2C+london&activityType=RUN&lat=51.522) to map movement by <span style="color: #5a9593">bike</span> and by <span style="color: #98d0cf">foot</span> through [Fitzrovia](http://en.wikipedia.org/wiki/Fitzrovia) and the surrounding areas.
 
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 
@@ -14,6 +14,8 @@ Using public data from [RunKeeper](http://runkeeper.com/search/routes/1?distance
 </style>
 
 <div id="tracer"></div>
+
+It's clear from this (and from standing in the street!) that lots of people pass through this area every day. That's a large number of lives that we can affect with our proposals.
 
 <script src="{{ site.baseurl }}/js/leaflet.js"></script>
 <script>

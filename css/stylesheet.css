@@ -219,6 +219,11 @@ ul.sections {
   text-align: center;
 }
 
+img.pretty {
+  display: block;
+  margin: 0 auto;
+}
+
 .story .date {
   color: #c3c3c3;
   margin-top: -20px;
