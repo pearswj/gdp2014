@@ -15,7 +15,7 @@ Using public data from [RunKeeper](http://runkeeper.com/search/routes/1?distance
 
 <div id="tracer"></div>
 
-<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+<script src="{{ site.baseurl }}/js/leaflet.js"></script>
 <script>
 	var map = L.map('tracer').setView([51.5181, -0.1357], 14);
   /*

@@ -25,7 +25,9 @@ Below are the top 20 happiest countries, apparently.
 19. Luxembourg
 20. Venzuela -->
 
-<div id="map"></div>
+<div id="worldhappiness"></div>
+
+The UK is nowhere to be seen.
 
 _— [The United Nations Sustainable Development Solutions Network annual "World Happiness Report" for 2013](http://unsdsn.org/happiness/)_
 
@@ -56,7 +58,7 @@ path.country.id-862 {
 path.country { fill: #f3f3f3; }
 </style>
 
-<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="{{ site.baseurl }}/js/topojson.v1.min.js"></script>
 <script>
 
 var width = 640,
@@ -72,11 +74,11 @@ var path = d3.geo.path()
 
 var graticule = d3.geo.graticule();
 
-var svg = d3.select("#map").append("svg")
+var wh = d3.select("#worldhappiness").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-svg.append("path")
+wh.append("path")
     .datum(graticule)
     .attr("class", "graticule")
     .attr("d", path);
@@ -84,7 +86,7 @@ svg.append("path")
 d3.json("{{ site.baseurl }}/data/world-50m.json", function(error, world) {
   var countries = topojson.feature(world, world.objects.countries).features;
 
-    svg.selectAll(".country")
+    wh.selectAll(".country")
         .data(countries)
       .enter().append("path")
         .attr("class", function(d) { return "country id-" + d.id; })
